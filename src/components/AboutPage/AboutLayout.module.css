@@ -1,0 +1,336 @@
+.aboutPage {
+  background-color: var(--lighten);
+  color: var(--dark);
+  min-height: 100vh;
+  padding: 0 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Герой-секция */
+.heroSection {
+  background: 
+    url("/coffee-hero.jpg") center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  margin: 0 -2rem 4rem -2rem;
+}
+
+.heroContent {
+  max-width: 800px;
+  padding: 0 2rem;
+  padding-left: 500px;
+}
+
+.heroTitle {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: black;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  color: black;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.heroDivider {
+  width: 100px;
+  height: 2px;
+  background: var(--dark);
+  margin: 0 auto;
+  opacity: 0.2;
+}
+
+/* Общие стили */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+  background-color: var(--light);
+  padding: 50px 100px;
+  
+  border-radius: 20px;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionTitle {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--darker);
+  margin-bottom: 1rem;
+}
+
+.sectionSubtitle {
+  font-size: 1.1rem;
+  color: var(--dark);
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* О нас */
+.aboutSection {
+  margin-bottom: 6rem;
+}
+
+.aboutContent {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.aboutText {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--dark);
+}
+
+.aboutText p {
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.aboutImage {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.aboutImage:hover {
+  transform: translateY(-5px);
+}
+
+.aboutImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.aboutImage:hover img {
+  transform: scale(1.03);
+}
+
+/* Преимущества */
+.featuresSection {
+  margin-bottom: 8rem;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2.5rem;
+  margin-top: 4rem;
+}
+
+.featureCard {
+  background: var(--lighten);
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.featureCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+.featureIcon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1.5rem;
+  color: var(--dark);
+  opacity: 0.8;
+}
+
+.featureCard h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--darker);
+}
+
+.featureCard p {
+  color: var(--dark);
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+/* Контакты */
+.contactSection {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 8rem;
+}
+
+.contactCard {
+  flex: 1;
+  background: var(--lighten);
+  padding: 3rem;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.contactItem {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.contactIcon {
+  width: 24px;
+  height: 24px;
+  color: var(--dark);
+  opacity: 0.7;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.contactItem h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--darker);
+}
+
+.contactItem p {
+  color: var(--dark);
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.reserveButton {
+  background: var(--dark);
+  color: var(--lighten);
+  border: none;
+  padding: 1.2rem 2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.reserveButton:hover {
+  background: var(--darker);
+  transform: translateY(-2px);
+}
+
+.mapContainer {
+  flex: 1;
+  height: 400px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+/* Команда */
+.teamSection {
+  margin-bottom: 6rem;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.teamMember {
+  text-align: center;
+}
+
+.teamMember img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 2rem;
+  border: 3px solid var(--lighten);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.teamMember:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.teamMember h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--darker);
+}
+
+.teamMember p {
+  color: var(--dark);
+  font-style: italic;
+  opacity: 0.8;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+  .aboutContent {
+    flex-direction: column;
+  }
+
+  .contactSection {
+    flex-direction: column;
+  }
+
+  .mapContainer {
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: 70vh;
+    margin-bottom: 3rem;
+  }
+
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutPage {
+    padding: 0 1rem;
+  }
+
+  .heroSection {
+    height: 60vh;
+    margin: 0 -1rem 2rem -1rem;
+  }
+
+  .featuresGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contactCard {
+    padding: 2rem;
+  }
+}

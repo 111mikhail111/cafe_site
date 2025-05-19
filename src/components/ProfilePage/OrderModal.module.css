@@ -1,0 +1,350 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.modalOverlay.visible {
+  opacity: 1;
+}
+
+.modalContainer {
+  position: relative;
+  background: var(--lighten);
+  border-radius: 16px;
+  width: 90%;
+  max-width: 500px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+  border: 1px solid var(--dark);
+  overflow: hidden;
+}
+
+.modalOverlay.visible .modalContainer {
+  transform: translateY(0);
+}
+
+.modalContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+  background: linear-gradient(90deg, var(--dark) 0%, var(--darker) 100%);
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--darker);
+  transition: transform 0.2s;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.closeButton:hover {
+  transform: rotate(90deg);
+  background-color: rgba(111, 78, 55, 0.1);
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--dark);
+}
+
+.modalHeader h2 {
+  margin: 0;
+  color: var(--darker);
+  font-size: 1.5rem;
+}
+
+.statusBadge {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+}
+
+.statusIcon {
+  margin-right: 6px;
+  font-size: 1rem;
+}
+
+.clientInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  background: var(--light);
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--dark) 0%, var(--darker) 100%);
+  color: var(--lighten);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.clientDetails h3 {
+  margin: 0 0 5px 0;
+  color: var(--darker);
+  font-size: 1.2rem;
+}
+
+.clientDetails p {
+  margin: 0;
+  color: var(--dark);
+  font-size: 0.9rem;
+}
+
+.orderTimeline {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 25px;
+}
+
+.orderTimeline::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: var(--dark);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.timelineDot {
+  position: absolute;
+  left: -30px;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--darker);
+  font-size: 0.8rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timelineContent h4 {
+  margin: 0 0 5px 0;
+  color: var(--darker);
+  font-size: 1rem;
+}
+
+.timelineContent p {
+  margin: 0;
+  color: var(--dark);
+  font-size: 0.9rem;
+}
+
+.orderSummary {
+  background: var(--light);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.summaryItem:last-child {
+  margin-bottom: 0;
+}
+
+.summaryItem span:first-child {
+  color: var(--darker);
+}
+
+.summaryItem span:last-child {
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.totalPrice {
+  font-size: 1.2rem;
+  color: var(--darker) !important;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.printButton {
+  background: var(--dark);
+  color: var(--lighten);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.printButton:hover {
+  transform: translateY(-2px);
+}
+
+.buttonIcon {
+  margin-right: 8px;
+}
+
+.closeModalButton {
+  background: var(--light);
+  color: var(--darker);
+  border: 1px solid #e0d0c0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.closeModalButton:hover {
+  transform: translateY(-2px);
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Адаптивность */
+@media (max-width: 576px) {
+  .modalContainer {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .modalActions {
+    flex-direction: column;
+  }
+
+  .printButton,
+  .closeModalButton {
+    width: 100%;
+  }
+}
+
+.productsList {
+  margin-bottom: 25px;
+  background: var(--light);
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.productsList h3 {
+  margin: 0 0 15px 0;
+  color: var(--darker);
+  font-size: 1.1rem;
+  border-bottom: 1px dashed var(--dark);
+  padding-bottom: 10px;
+}
+
+.productsHeader,
+.productItem {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1.5fr; /* Примерное соотношение колонок */
+  gap: 10px;
+  padding: 8px 0;
+  align-items: center;
+}
+
+.productsHeader {
+  font-weight: bold;
+  color: var(--darker);
+  border-bottom: 1px solid var(--dark);
+}
+
+.productItem {
+  color: var(--dark);
+  border-bottom: 1px dashed var(--dark-lighten);
+  font-size: 0.95rem;
+}
+
+.productItem:last-child {
+  border-bottom: none;
+}
+
+.productName {
+  word-break: break-word; /* Перенос длинных названий */
+}
+
+.productAmount {
+  text-align: center;
+}
+
+.productPrice {
+  text-align: right;
+}
+
+/* Стили для адаптивности списка товаров */
+@media (max-width: 576px) {
+  .productsHeader,
+  .productItem {
+    grid-template-columns: 1fr 1fr 1fr; /* Изменяем колонки для маленьких экранов */
+    font-size: 0.9rem;
+  }
+
+  .productAmount,
+  .productPrice {
+    text-align: left; /* Выравнивание для маленьких экранов */
+  }
+}

@@ -1,0 +1,79 @@
+.coffee-shop-home-page {
+  position: relative;
+  min-height: 100vh;
+  background-image: url("https://i.pinimg.com/originals/b8/6a/5a/b86a5ae9a7d43626d131d2d1c0d3520e.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.background-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+}
+
+.welcome-message {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 640px) {
+  .welcome-message {
+    font-size: 3.5rem;
+  }
+}
+
+.description {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+@media (min-width: 640px) {
+  .description {
+    font-size: 1.5rem;
+  }
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .contact-details {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .icon {
+    height: 2rem;
+    width: 2rem;
+  }
+}

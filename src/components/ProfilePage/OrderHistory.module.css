@@ -1,0 +1,91 @@
+.orderHistoryH2Header {
+  font-size: 2rem;
+}
+
+.orderHistory {
+  padding: 1rem;
+  background-color: var(--light);
+  color: var(--dark);
+  border: 4px dashed var(--dark);
+  border-radius: 0.5rem;
+  margin-top: 15px;
+}
+
+.orderHistoryHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.sortButton {
+  background-color: transparent;
+  border: none;
+  color: var(--dark);
+  cursor: pointer;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+  font-size: 1.3rem;
+}
+
+.sortButton:hover,
+.sortButton.active {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.1
+  ); /*  Немного затемняем при наведении/активности */
+}
+
+.orderList {
+  list-style: none;
+  padding: 0;
+}
+
+.orderItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 2rem;
+  border-bottom: 1px solid var(--dark);
+  background-color: var(--dark);
+  color: var(--light);
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.orderItem:last-child {
+  border-bottom: none;
+}
+
+.orderId {
+  flex: 1;
+  font-size: 1.5rem;
+}
+
+.orderDate {
+  flex: 1.5;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.orderTotal {
+  flex: 1;
+  text-align: right;
+  font-size: 1.5rem;
+}
+
+.orderButton {
+  width: 100%;
+  padding: 1rem;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.orderButton:hover {
+  background-color: rgba(111, 78, 55, 0.05);
+}

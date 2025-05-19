@@ -1,0 +1,134 @@
+.cartContainer {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5rem;
+    margin-bottom: 4rem;
+    max-width: 100%;
+    min-height: 340px;
+}
+
+.cartTitle {
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--darker);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.cartList {
+    background-color: var(--light);
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.cartEmptyMessage {
+    color: var(--darker);
+    text-align: center;
+}
+
+.cartItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--dark);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.cartItem:last-child {
+    border-bottom: none;
+}
+
+.itemName {
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 1.5rem;
+    width: 33%;
+}
+
+.itemPrice {
+    color: var(--dark);
+    font-size: 2rem;
+    width: 33%;
+}
+
+.itemQuantity{
+     color: var(--dark);
+     font-size: 1.5rem;
+     width: 33%;
+}
+
+.totalInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    
+}
+
+.totalLabel {
+    color: var(--dark);
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.totalAmount {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark);
+}
+
+.checkoutButton {
+    margin-top: 1.5rem;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    font-size: 2rem;
+    color: var(--lighten)
+}
+
+
+.quantityControls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.quantityButton {
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+}
+
+.quantityNumber {
+    font-size: 1rem;
+    color: var(--dark);
+    margin: 0 0.5rem;
+    min-width: 1.5rem;
+    text-align: center;
+}
+
+@media (min-width: 640px) {
+    .cartContainer {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .cartContainer {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 768px) {
+    .cartContainer {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 768px) {
+    .cartContainer {
+        max-width: 768px;
+    }
+}

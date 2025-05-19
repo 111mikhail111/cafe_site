@@ -1,0 +1,100 @@
+.cs-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.cs-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: #f1f5f9;
+}
+
+.cs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .cs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .cs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.cs-card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  padding: 1rem;
+}
+
+.cs-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.cs-product-image {
+  background-color: #e5e5e5;
+  border: 2px dashed #d1d5db;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.cs-card-content {
+  margin-bottom: 1rem;
+}
+
+.cs-card-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.cs-card-description {
+  
+  font-size: 3rem;
+  color: #6b7280;
+}
+
+.cs-card-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.favorite-button {
+  background-color: #f9ebe0;
+  width: 100%;
+  height: 4rem;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  transition: background-color 0.3s ease;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.favorite-button:hover {
+  background-color: #ffddc3;
+}
+
+

@@ -1,0 +1,259 @@
+.paymentContainer {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+  max-width: 70%;
+}
+
+.paymentTitle {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--darker);
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.paymentContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background-color: var(--light);
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--darker);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--dark);
+}
+
+.orderSummary {
+  padding: 1rem;
+}
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.orderItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+}
+
+.itemName {
+  color: var(--dark);
+  font-weight: 500;
+  flex: 2;
+}
+
+.itemQuantity {
+  color: var(--dark);
+  flex: 1;
+  text-align: center;
+}
+
+.itemPrice {
+  color: var(--darker);
+  font-weight: 600;
+  flex: 1;
+  text-align: right;
+}
+
+.totalSection {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--dark);
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  color: var(--dark);
+}
+
+.totalAmountContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.originalTotal {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.finalTotal {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--accent-color);
+}
+
+.loyaltyRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  background-color: var(--lighten);
+  border-radius: 8px;
+}
+
+.loyaltyInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.loyaltyText {
+  font-size: 0.9rem;
+  color: var(--darker);
+}
+
+.loyaltyPoints {
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.loyaltyToggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.toggleText {
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.toggleInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggleSlider {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  background-color: var(--dark);
+  border-radius: 10px;
+  transition: 0.4s;
+}
+
+.toggleSlider:before {
+  content: "";
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+.toggleInput:checked + .toggleSlider {
+  background-color: var(--dark);
+}
+
+.toggleInput:checked + .toggleSlider:before {
+  transform: translateX(16px);
+}
+
+.totalLabel {
+  font-weight: 500;
+}
+
+.totalAmount {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--darker);
+}
+
+.paymentForm {
+  padding: 1rem;
+}
+
+.paymentMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.paymentMethod {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--dark);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.paymentMethod:hover {
+  border-color: var(--darker);
+}
+
+.paymentMethod input[type="radio"] {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.methodContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.methodName {
+  font-weight: 500;
+  color: var(--darker);
+}
+
+.methodDescription {
+  font-size: 0.9rem;
+  color: var(--dark);
+}
+
+.errorMessage {
+  color: #ef4444;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem;
+  background-color: #fee2e2;
+  border-radius: 0.5rem;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .paymentContent {
+    grid-template-columns: 1fr;
+  }
+
+  .paymentTitle {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}

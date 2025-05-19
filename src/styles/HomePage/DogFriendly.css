@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  flex-direction: row;
+  width: 100%;
+  max-width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-section,
+.right-section {
+  width: 50%;
+  padding: 20px;
+}
+
+
+.right-section {
+  height: 600px;
+  display:  flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .left-section,
+  .right-section {
+    width: 50%;
+  }
+}
+
+.card {
+  background-color: #f9ebe0;
+  padding: 24px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+}
+
+.card-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: black;
+}
+
+.policy-list {
+    font-size: 2rem;
+  list-style-type: disc;
+  padding-left: 24px;
+}
+
+.policy-list li {
+  margin-bottom: 8px;
+}
+
+.image-container {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dog-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  max-height: 560px;
+  object-fit: cover;
+}

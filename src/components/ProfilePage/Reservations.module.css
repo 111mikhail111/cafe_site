@@ -1,0 +1,237 @@
+/* Основные стили контейнера */
+.csContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem;
+  padding-left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+.csTitle {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: var(--darker);
+}
+
+/* Сетка карточек */
+.csGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Карточка бронирования */
+.csCard {
+  background-color: var(--lighten);
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #e5e7eb;
+}
+
+.csCard:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.csCardTitle {
+  font-size: 1.5rem;
+  color: var(--darker);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.reservationInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--dark);
+}
+
+.infoIcon {
+  color: var(--darker);
+}
+
+/* Кнопка отмены */
+.cancelButton {
+  padding: 0.75rem;
+  background-color: var(--dark);
+  color: var(--lighten);
+  border: 1px solid var(--darker);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 1rem;
+}
+
+.cancelButton:hover {
+  opacity: 0.8;
+}
+
+.cancelButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Состояния загрузки и ошибки */
+.loadingOverlay,
+.errorOverlay,
+.emptyState {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--lighten);
+}
+
+.loadingOverlay p {
+  color: #3b82f6;
+  font-size: 1.2rem;
+}
+
+.errorOverlay p {
+  color: #dc2626;
+  font-size: 1.2rem;
+}
+
+.emptyState p {
+  color: var(--darker);
+  font-size: 1.2rem;
+}
+
+/* Модальное окно отмены */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  background-color: var(--lighten);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--darker);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.closeButton:hover {
+  color: var(--darker);
+}
+
+.modalTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--darker);
+}
+
+.modal p {
+  color: var(--dark);
+  margin-bottom: 2rem;
+}
+
+.modalActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+.cancelConfirmButton {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--dark);
+  color: var(--lighten);
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancelConfirmButton:hover {
+  opacity: 0.9;
+}
+
+.cancelConfirmButton:disabled {
+  background-color: #9ca3af;
+  cursor: not-allowed;
+}
+
+.modalSecondaryButton {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--dark);
+  color: var(--lighten);
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modalSecondaryButton:hover {
+  opacity: 0.9;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+  .csContainer {
+    padding: 2rem 1rem;
+  }
+
+  .csTitle {
+    font-size: 2rem;
+  }
+
+  .csGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .modalActions {
+    flex-direction: column;
+  }
+
+  .cancelConfirmButton,
+  .modalSecondaryButton {
+    width: 100%;
+  }
+}

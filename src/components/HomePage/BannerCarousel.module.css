@@ -1,0 +1,192 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin: 2rem 0;
+  
+}
+
+.carouselInner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+.banner {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.bannerContent {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+  padding: 4rem 20rem;
+  background-color: var(--light);
+}
+
+.textContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 2rem;
+  color: var(--darker);
+  max-width: 50%;
+}
+
+.title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  color: var(--dark);
+}
+
+.ctaButton {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--dark);
+  color: var(--lighten);
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: fit-content;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.arrowIcon {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .arrowIcon {
+  transform: translateX(3px);
+}
+
+.imageContainer {
+  flex: 1;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.bannerImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.controlButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--lighten);
+  z-index: 10;
+  backdrop-filter: blur(5px);
+}
+
+.controlButton:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.controlButton svg {
+  color: var(--dark);
+}
+
+.prevButton {
+  left: 20px;
+}
+
+.nextButton {
+  right: 20px;
+}
+
+.dotsContainer {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.activeDot {
+  background-color: var(--darker);
+  transform: scale(1.2);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .carousel {
+    height: 350px;
+  }
+
+  .bannerContent {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .textContent {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .imageContainer {
+    width: 100%;
+    height: 150px;
+  }
+}

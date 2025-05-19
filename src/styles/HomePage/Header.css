@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playwrite+AU+SA:wght@100..400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap');
+
+body {
+  font-family: "Roboto Condensed", serif;
+}
+
+header {
+  background-color: #080403;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container-header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  background-color: #e0e0e0;
+  border: 2px dashed #ccc;
+  border-radius: 12px;
+  margin-right: 16px;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.phone-number {
+  display: flex;
+  align-items: center;
+  color: #EDF2F4;
+}
+
+.phone-number a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.phone-number a:hover {
+  text-decoration: underline;
+}
+
+.phone-number svg {
+  margin-right: 8px;
+}
+
+.address-select {
+  width: fit-content;
+  padding: 8px;
+  border: 1px solid #EDF2F4;
+  border-radius: 4px;
+  background-color:#110A08;
+  color: #EDF2F4;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #EDF2F4;
+  margin-right: 30px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+

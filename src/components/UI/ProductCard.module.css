@@ -1,0 +1,111 @@
+.carouselCard {
+  height: 100%;
+  background-color: var(--light);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.carouselCard:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.imageContainer {
+  position: relative;
+  height: 0;
+  padding-bottom: 70%;
+  overflow: hidden;
+}
+
+.carouselImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.carouselCard:hover .carouselImage {
+  transform: scale(1.03);
+}
+
+.priceTag {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: var(--darker);
+  color: var(--light);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--lighten);
+}
+
+.carouselCardContent {
+  padding: 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.carouselCardTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: var(--darker);
+}
+
+.carouselCardDescription {
+  color: var(--dark);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  opacity: 0.8;
+}
+
+.orderButton {
+  background: var(--dark);
+  color: var(--light);
+  border: none;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.orderButton:hover {
+  background: var(--darker);
+  transform: translateY(-2px);
+}
+
+.btnContainer {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.quantityBtn {
+    background-color: transparent;
+    border: none;
+    color: var(--lighten);
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}

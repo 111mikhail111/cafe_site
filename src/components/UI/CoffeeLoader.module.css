@@ -1,0 +1,258 @@
+/* Добавьте эти стили в ваш файл */
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--lighten);
+  z-index: 1000;
+}
+
+.container {
+  width: 300px;
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.coffeeHeader {
+  padding: 10px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ddcfcc;
+  border-radius: 10px;
+}
+
+.coffeeHeaderButtons {
+  width: 25px;
+  height: 25px;
+  background-color: #282323;
+  border-radius: 50%;
+  box-shadow: 40px 0 0 0 #282323;
+}
+
+.coffeeHeaderButtons::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  display: block;
+  transform: translate(100%, 25px);
+  background-color: #615e5e;
+  box-shadow: 40px 0 0 0 #615e5e;
+}
+
+.coffeeHeaderDisplay {
+  width: 50px;
+  height: 50px;
+  display: block;
+  border-radius: 50%;
+  background-color: #9acfc5;
+  border: 5px solid #43beae;
+  box-sizing: border-box;
+}
+
+.coffeeHeaderDetails {
+  width: 8px;
+  margin-left: 16px;
+  height: 20px;
+  align-self: flex-start;
+  background-color: #9b9091;
+  box-shadow: -12px 0 0 #9b9091, -24px 0 0 #9b9091;
+}
+
+.coffeeMedium {
+  width: 90%;
+  height: 160px;
+  position: relative;
+  background-color: #bcb0af;
+}
+
+.coffeeMedium::before {
+  content: "";
+  width: 90%;
+  height: 100px;
+  background-color: #776f6e;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  border-radius: 20px 20px 0 0;
+}
+
+.coffeeMediumExit {
+  width: 60px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 30px);
+  background-color: #231f20;
+}
+
+.coffeeMediumExit::before {
+  content: "";
+  width: 50px;
+  height: 20px;
+  border-radius: 0 0 50% 50%;
+  position: absolute;
+  bottom: -20px;
+  left: calc(50% - 25px);
+  background-color: #231f20;
+}
+
+.coffeeMediumExit::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: -30px;
+  left: calc(50% - 5px);
+  background-color: #231f20;
+}
+
+.coffeeMediumArm {
+  width: 70px;
+  height: 20px;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  background-color: #231f20;
+}
+
+.coffeeMediumArm::before {
+  content: "";
+  width: 15px;
+  height: 5px;
+  position: absolute;
+  top: 7px;
+  left: -15px;
+  background-color: #9e9495;
+}
+
+.coffeeMediumCup {
+  width: 80px;
+  height: 47px;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 40px);
+  background-color: #fff;
+  border-radius: 0 0 70px 70px/0 0 110px 110px;
+}
+
+.coffeeMediumCup::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 6px;
+  right: -13px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+}
+
+.coffeeMediumLiquid {
+  width: 6px;
+  height: 63px;
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 3px);
+  background-color: transparent;
+  overflow: hidden;
+}
+
+.coffeeMediumLiquid::before {
+  transform: translateY(-100%);
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #74372b;
+  animation: liquid 1000ms linear 300ms infinite normal both;
+}
+
+.smoke {
+  opacity: 0;
+  width: 8px;
+  height: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: #b3aeae;
+}
+
+.smokeOne {
+  bottom: 30px;
+  left: 102px;
+  animation: smoke 1s 300ms linear infinite;
+}
+
+.smokeTwo {
+  bottom: 40px;
+  left: 118px;
+  animation: smoke 2s 400ms linear infinite;
+}
+
+.smokeThree {
+  bottom: 40px;
+  right: 118px;
+  animation: smoke 3s 500ms linear infinite;
+}
+
+.smokeFour {
+  bottom: 30px;
+  right: 102px;
+  animation: smoke 4s 600ms linear infinite;
+}
+
+.container::after {
+  content: "";
+  width: 95%;
+  height: 15px;
+  background-color: #41bdad;
+  box-shadow: 0 15px 0 5px #000;
+  border-radius: 10px;
+}
+
+@keyframes smoke {
+  0% {
+    transform: translateY(0px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 0.3;
+  }
+  80% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+}
+
+@keyframes liquid {
+  10% {
+    transform: translateY(0);
+  }
+  90% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
